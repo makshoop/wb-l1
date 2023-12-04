@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Таблица</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="page">
+
+            <div class="page-table-wrapper">
+                <table class="page-table table">
+
+                    <thead>
+                        <tr class="table-head-row">
+                        <th class="table-header table-header_number">#</th>
+                        <th class="table-header">FirstName</th>
+                        <th class="table-header">LastName</th>
+                        <th class="table-header">Telephone</th>
+                        <th class="table-header">Address</th>
+                        <th class="table-header">City</th>
+                        <th class="table-header">State</th>
+                        <th class="table-header">ZIP</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-body">
+                        <template id="table-row">
+                            <tr class="table-row">
+                                <td class="table-data table-data-number"></td>
+                                <td class="table-data table-data-fname"></td>
+                                <td class="table-data table-data-lname"></td>
+                                <td class="table-data table-data-tel"></td>
+                                <td class="table-data table-data-address"></td>
+                                <td class="table-data table-data-city"></td>
+                                <td class="table-data table-data-state"></td>
+                                <td class="table-data table-data-zip"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+
+                <div class="page-pagiantor paginator">
+                    <button type="button" class="paginator-btn paginator-btn-prev paginator-btn_inactive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+
+                    <input type="number" class="paginator-number" value="1">
+                    <span class="page-pagiantor-length"></span>
+
+                    <button type="button" class="paginator-btn paginator-btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

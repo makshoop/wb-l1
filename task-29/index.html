@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>reg</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="page">
+        <form class="page-form">
+            <div class="user-input-container user-input-container-username">
+                <input class="user-input" type="text" id="username" name="username" required>
+                <label class="user-label" for="username">Имя</label>
+            </div>
+            <div class="user-input-container user-input-container-email">
+                <input class="user-input" type="email" id="email" name="email" required>
+                <label class="user-label" for="email">Почта</label>
+            </div>
+            <div class="user-input-container user-input-container-phone">
+                <input class="user-input" type="tel" id="phone" name="phone" required>
+                <label class="user-label" for="phone">Телефон</label>
+            </div>
+            <button type="submit" class="user-sbt-btn">Отправить</button>
+        </form>
+        <div class="page-popup popup">
+            <div class="popup-box">
+                <h2>Данные сохранены!</h2>
+                <ul class="popup-data">
+                    <template id="input-data">
+                        <li class="popup-data-saved">
+                            <span class="popup-field-name"></span>
+                            <span class="popup-field-value"></span>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

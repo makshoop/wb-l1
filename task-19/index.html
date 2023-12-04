@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>posts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="page">
+
+        <h1 class="page-heading">Посты ВК</h1>
+
+        <form class="page-form">
+            <div class="page-input-box">
+                <input type="text" placeholder="Введите сообщество" class="page-input">
+                <button type="submit" class="page-search-btn">поиск</button>
+            </div>
+
+        </form>
+
+        <div class="page-group group">
+            <img class="group-img" src="#" alt>
+            <span class="group-title"></span>
+        </div>
+
+        <ul class="page-posts">
+            <template id="post">
+            <li class="page-post post">
+
+                <span class="post-date"></span>
+                <p class="post-text"></p>
+                <div class="post-img-box">
+                    <img class="post-img" src="#" alt="">
+                </div>
+
+                <div class="post-bottom-box">
+                    <div class="post-actions-box">
+                        <div class="post-action-element">
+                            Likes -
+                            <span class="post-like-amount"></span>
+                        </div>
+                        <div class="post-action-element">
+                            Comments -
+                            <span class="post-comment-amount"></span>
+                        </div>
+                        <div class="post-action-element">
+                            Reposts - 
+                            <span class="post-repost-amount"></span>
+                        </div>
+                    </div>
+                    <div class="post-view-box">
+                        views -
+                        <span class="post-view-amount"></span>
+                    </div>
+                </div>
+
+            </li>
+            </template>
+        </ul>
+
+        <div class="page-error error">
+            <div class="error-box">
+                <span class="error-text">Не найдено:(</span>
+                <button class="error-close-btn">X</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

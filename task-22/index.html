@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>document.write()</title>
+    </head>
+    <body>
+        <div class="page">
+
+            <!--
+                Для проверки ограничения на количество вызовов document.write внутри document.write,
+                запускаем рекурсивно функцию getFunctionCalls до возникновения ошибки переполнения стека.
+                Ошибку перехватываем в блоке catch.
+
+                Количество вызовов различно в разных браузерах, например: Chrome - 8947, Mozilla - 35028.
+
+                Таким образом, ограничение на вложенные вызовы document.write зависит от размера стека браузера.
+            -->
+
+            <script>
+                let callsCount = 0;
+                function getFunctionCalls() {
+                    try {
+                        callsCount++;
+                        document.write('<span style="display: none;"></span>');
+                        getFunctionCalls();
+                    } catch (error) {
+                        console.log('Document.write counter:', callsCount);
+                    }
+                }
+                getFunctionCalls();
+            </script>
+
+            <span class="page-value"></span>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+body {
+    overflow-y: scroll;
+}
+
+.page {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-heading {
+    font-weight: 400;
+    font-size: 4em;
+}
+
+span {
+    font-size: 12em;
+}
